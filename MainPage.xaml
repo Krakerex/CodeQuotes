@@ -6,15 +6,18 @@
 
     <Grid BackgroundColor="Navy">
         <Grid.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <LinearGradientBrush EndPoint="1,1" x:Name="GradientBackground">
                 <GradientStopCollection>
-                    <GradientStop Offset="0" Color="DarkBlue" />
-                    <GradientStop Offset="1" Color="LightBlue" />
+                    <GradientStop Offset="0" Color="#051937" />
+                    <GradientStop Offset=".25" Color="#004d7a" />
+                    <GradientStop Offset=".50" Color="#008793" />
+                    <GradientStop Offset=".75" Color="#00bf72" />
+                    <GradientStop Offset="1" Color="#a8eb12" />
                 </GradientStopCollection>
             </LinearGradientBrush>
         </Grid.Background>
         <Grid Margin="25" RowDefinitions=".8*,.2*">
-            <Label
+            <Label x:Name="lblQuote"
                 FontFamily="ChakraPetchBold"
                 FontSize="50"
                 HorizontalTextAlignment="Center"
@@ -22,8 +25,10 @@
                 TextColor="White"
                 VerticalOptions="Center" />
             <Button
+                x:Name="btnGenerateQuote"
                 Grid.Row="1"
                 BackgroundColor="Black"
+                Clicked="btnGenerateQuote_Clicked"
                 FontFamily="ChakraPetchBold"
                 Opacity=".4"
                 Text="Get New Quote" />
