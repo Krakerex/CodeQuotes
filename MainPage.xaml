@@ -6,7 +6,7 @@
 
     <Grid BackgroundColor="Navy">
         <Grid.Background>
-            <LinearGradientBrush EndPoint="1,1" x:Name="GradientBackground">
+            <LinearGradientBrush x:Name="GradientBackground" EndPoint="1,1">
                 <GradientStopCollection>
                     <GradientStop Offset="0" Color="#051937" />
                     <GradientStop Offset=".25" Color="#004d7a" />
@@ -17,9 +17,10 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Grid Margin="25" RowDefinitions=".8*,.2*">
-            <Label x:Name="lblQuote"
+            <Label
+                x:Name="lblQuote"
                 FontFamily="ChakraPetchBold"
-                FontSize="50"
+                FontSize="Large"
                 HorizontalTextAlignment="Center"
                 Text="Example Quote"
                 TextColor="White"
@@ -31,7 +32,8 @@
                 Clicked="btnGenerateQuote_Clicked"
                 FontFamily="ChakraPetchBold"
                 Opacity=".4"
-                Text="Get New Quote" />
+                Text="Get New Quote"
+                TextColor="White" />
         </Grid>
     </Grid>
 </ContentPage>
